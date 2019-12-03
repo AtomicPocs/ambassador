@@ -12,6 +12,7 @@ metadata:
   name: ambassador
 spec:
   type: LoadBalancer
+  replicas: 1
   externalTrafficPolicy: Local
   ports:
     - name: http
