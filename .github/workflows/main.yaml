@@ -22,13 +22,12 @@ jobs:
         id: setcontext
       - uses: azure/k8s-deploy@v1
         with:
-          images: 'quay.io/datawire/ambassador:0.85.0'
           manifests: |
             ambassador-rbac.yaml
             ambassador-service.yaml
             ambassador-tls-context.yaml
           images: |
-            IMAGE_ID
+            quay.io/datawire/ambassador:0.85.0
           imagepullsecrets: |
             regcred
           namespace: atomic-pocs
