@@ -28,6 +28,4 @@ jobs:
             ambassador-tls-context.yaml
           images: |
             quay.io/datawire/ambassador:0.85.0
-          imagepullsecrets: |
-            regcred
           namespace: atomic-pocs
