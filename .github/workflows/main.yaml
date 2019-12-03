@@ -23,7 +23,7 @@ jobs:
           manifests: |
             ambassador-rbac.yaml
             ambassador-service.yaml
-            ambassador-tls-context.yaml
+            # ambassador-tls-context.yaml
           images: |
             quay.io/datawire/ambassador:0.85.0
           namespace: atomic-pocs
