@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-env:
-  IMAGE_NAME: ambassador
 
 jobs:
   push:
