@@ -5,7 +5,7 @@ metadata:
   labels:
     service: ambassador-admin
   name: ambassador-admin
-  
+
 spec:
   type: NodePort
   ports:
@@ -19,7 +19,7 @@ apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
 metadata:
   name: ambassador
-  
+
 rules:
 - apiGroups: [""]
   resources: [ "endpoints", "namespaces", "secrets", "services" ]
@@ -47,13 +47,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: ambassador
-  
+
 ---
 # apiVersion: rbac.authorization.k8s.io/v1beta1
 # kind: ClusterRoleBinding
 # metadata:
 #   name: ambassador
-  
+
 # roleRef:
 #   apiGroup: rbac.authorization.k8s.io
 #   kind: ClusterRole
@@ -79,7 +79,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: authservices.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -99,7 +99,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: consulresolvers.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -117,7 +117,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kubernetesendpointresolvers.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -135,7 +135,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: kubernetesserviceresolvers.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -153,7 +153,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: mappings.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -173,7 +173,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: modules.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -193,7 +193,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: ratelimitservices.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -213,7 +213,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: tcpmappings.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -233,7 +233,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: tlscontexts.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -253,7 +253,7 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   name: tracingservices.getambassador.io
-  
+
 spec:
   group: getambassador.io
   version: v1
@@ -273,7 +273,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ambassador
-  
+
 spec:
   replicas: 1
   selector:
